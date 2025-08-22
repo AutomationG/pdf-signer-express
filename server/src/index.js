@@ -2,11 +2,13 @@ import express from "express";
 import cors from "cors";
 import multer from "multer";
 import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
+import env from "dotenv";
 
+env.config();
 const app = express();
 
-const PORT = 4000;
-const CORS_ORIGIN = "http://localhost:5173";
+const PORT = process.env.PORT || 4000;
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:5173";
 
 app.use(cors({ origin: CORS_ORIGIN }));
 app.use(express.json());
@@ -76,6 +78,5 @@ app.use((_req, res) => {
 });
 
 app.listen(PORT,'0.0.0.0', () => {
-  console.log(`Mock PDF signing server listening on http://localhost:${PORT}`);
-  console.log(`CORS origin allowed: ${CORS_ORIGIN}`);
+  console.log(`Server listening`);
 });

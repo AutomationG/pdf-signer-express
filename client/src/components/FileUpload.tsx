@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import axios from "axios";
 import type { FileUploadProps } from "../utils/types";
-import { BASE_URL } from "../utils/constant";
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
 
 const FileUpload: React.FC<FileUploadProps> = ({onSigned}) => {
     const [file, setFile] = useState<File | null>(null);
