@@ -5,9 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "node --watch src/index.js",
+    "dev": "node --watch index.js",
     "build": "echo \"No build step for plain JS\"",
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Gargi",
