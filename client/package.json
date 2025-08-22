@@ -5,7 +5,8 @@
   "type": "module",
   "author": "Gargi",
   "scripts": {
-    "dev": "vite --host --port 5173",
+    "devphone": "vite --host --port 5173",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
