@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "node --watch src/index.js",
+    "build": "echo \"No build step for plain JS\"",
     "start": "node src/index.js"
   },
   "keywords": [],
